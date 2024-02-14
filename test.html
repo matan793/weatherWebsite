@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather Forecast</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+  }
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+  }
+  .forecast-card {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  .forecast-card img {
+    max-width: 100%;
+    height: auto;
+  }
+  select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <div>
+      Countries:
+      <select name="countries" id="countries">
+        <option value="us">United States</option>
+        <!-- Add more countries here -->
+      </select>
+    </div>
+    <div>
+      Cities:
+      <select name="cities" id="cities">
+        <option value="destrehan">Destrehan</option>
+        <!-- Add more cities here -->
+      </select>
+    </div>
+  </div>
+
+  <h1>United States - Destrehan</h1>
+
+  <div class="forecast-grid">
+    <!-- Repeat this block for each forecast card -->
+    <div class="forecast-card">
+      <div>+3hrs</div>
+      <img src="weather-icon.png" alt="Partly Cloudy">
+      <div>22°</div>
+    </div>
+    <!-- ... -->
+  </div>
+</div>
+
+</body>
+</html>
